@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stddef.h>
 
 int check_cycle(listint_t *list)
 {
