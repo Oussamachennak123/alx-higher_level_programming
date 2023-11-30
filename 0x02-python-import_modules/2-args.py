@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-
+    """Print the n"""
     from sys import argv
 
     if len(argv) == 1:
