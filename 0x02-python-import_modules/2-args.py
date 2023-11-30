@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    """Print the n"""
-    from sys import argv
+    import sys
 
-    if len(argv) == 1:
+    if len(sys.argv) == 1:
         print("0 arguments.")
-    elif len(argv) == 2:
+    elif len(sys.argv) == 2:
         print("1 argument:")
     else:
-        print("{} arguments:".format(len(argv) - 1))
-    for i in range(len(argv) - 1):
-        print("{}: {}".format(i + 1, argv[i + 1]))
+        print("{} arguments:".format(len(sys.argv) - 1))
+    for i in range(len(sys.argv) - 1):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
