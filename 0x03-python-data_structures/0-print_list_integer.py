@@ -4,4 +4,4 @@ if __name__ == "__main__":
         my_list = [1, 2, 3, 4, 5]
         for num in my_list :
             print('{}'.format(num))
-    print_list_integer()
+print_list_integer()
