@@ -2,8 +2,8 @@
 def uniq_add(my_list=[]):
     add = []
     somme = 0
-    for x in my_list:
-        if x not in add:
+    for a in my_list:
+        if a not in add:
             somme += 1
-            add.append(x)
+            add.append(a)
     return somme
