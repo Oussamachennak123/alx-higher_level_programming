@@ -4,4 +4,4 @@
 
 class Square():
     """An empty class without content"""
-    pass# mandatory for empty classes
+    pass
