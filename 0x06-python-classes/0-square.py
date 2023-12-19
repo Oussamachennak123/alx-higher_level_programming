@@ -2,6 +2,7 @@
 
 """ define class Square """
 
+
 class Square():
     """class Square"""
-    pass# mandatory for empty classes
+    pass  # mandatory for empty classes
