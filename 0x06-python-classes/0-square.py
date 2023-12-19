@@ -3,5 +3,5 @@
 """ define class Square """
 
 class Square():
-    """An empty class without content"""
-    pass
+    """class Square"""
+    pass# mandatory for empty classes
