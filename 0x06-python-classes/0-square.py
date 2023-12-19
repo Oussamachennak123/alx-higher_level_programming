@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-"""Une classe vide sans contenu."""
+""" define class Square """
+
 class Square():
-    pass # obligatoire pour les classes vides
+    """An empty class without content"""
+    
+    pass # mandatory for empty classes
