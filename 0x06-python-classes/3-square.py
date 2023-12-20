@@ -13,4 +13,4 @@ class Square():
             self.__size = __size
 
     def area(self):  # déclarer self comme parametre
-        return (self.__size ** 2)  # puissance 2
+        return (self.__size * self.__size)  # puissance 2
