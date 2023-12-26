@@ -15,7 +15,6 @@ class Square():
         @property  # create the property
         def size(self):
             return self.__size
-        """ define the propert """
 
         @size.setter  # create the setter
         def size(self, value):
@@ -28,4 +27,3 @@ class Square():
 
     def area(self):  # déclarer self comme parametre
         return (self.__size ** 2)  # puissance 2
-
