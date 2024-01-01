@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    """
-    safe_print_list - a function that prints <x>
-    element of <my_list>
+    """print x elements of a list.
+
+    Args:
+        my_list (list): list of all elements.
+        x (int): the number of time you need to iterate over the list
+    Return:
+        The number of elements printed.
     """
     Suivant = 0
     try:
@@ -14,3 +18,5 @@ def safe_print_list(my_list=[], x=0):
     except IndexError as e:
         print(f"Erreur : {e}")
     return Suivant
+
+safe_print_list(my_list=[1, 2, 5], x=8)
