@@ -5,37 +5,30 @@
 
 class Rectangle:
     """ creation class Rectangle """
-    pass  # class vide
+    def __init__(self, width=0, height=0):
+        self.__width = width
+        self.__height = height
 
+    @property  # propert width
+    def width(self):
+        return self.__width
 
-def __init__(self, width=0, height=0):
-    self.__width = width
-    self.__height = height
+    @width.setter  # setter width with value
+    def width(self, value):
+        if value != int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise TypeError("width must be >= 0")
+        self.__width = value
 
+    @property  # create property heighit
+    def height(self):
+        return self.__height
 
-@property  # propert width
-def width(self):
-    return self.__width
-
-
-@width.setter  # setter width with value
-def width(self, value):
-    if value != int:
-        raise TypeError("width must be an integer")
-    elif value < 0:
-        raise TypeError("width must be >= 0")
-    self.__width = value
-
-
-@property  # create property heighit
-def height(self):
-    return self.__height
-
-
-@height.setter  # setter height with value
-def height(self, value):
-    if value != int:
-        raise TypeError("height must be an integer")
-    elif value < 0:
-        raise TypeError("height must be >= 0")
-    self.__height = value
+    @height.setter  # setter height with value
+    def height(self, value):
+        if value != int:
+            raise TypeError("height must be an integer")
+        elif value < 0:
+            raise TypeError("height must be >= 0")
+        self.__height = value
