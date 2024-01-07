@@ -42,7 +42,7 @@ class Rectangle:
         else:
             return 2 * (self.__width + self.__height)
 
-    def draw(self):
+    def __str__(self):
         """
         Represents the rectangle with the # character
         """
