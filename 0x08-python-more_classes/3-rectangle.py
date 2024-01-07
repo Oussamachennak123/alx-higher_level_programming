@@ -43,6 +43,9 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
 
     def draw(self):
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        return "\n".join(["#" * self.__width] * self.__heigh)
+    """
+    Represents the rectangle with the # character
+    """
+    if self.__width == 0 or self.__height == 0:
+        return ""
+    return "\n".join(["#" * self.__width] * self.__heigh)
