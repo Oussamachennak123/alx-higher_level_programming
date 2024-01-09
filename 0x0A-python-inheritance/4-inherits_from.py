@@ -4,7 +4,6 @@
 
 def inherits_from(obj, a_class):
     """  that prints the list, but sorted (ascending sort) """
-
     if isinstance(obj, a_class) or issubclass(type(obj), a_class):
         return True
     return False
