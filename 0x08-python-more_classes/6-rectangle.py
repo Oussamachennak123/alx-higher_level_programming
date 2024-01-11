@@ -3,7 +3,7 @@
 """ define class Rectangle"""
 
 
-number_of_instances = 0
+number_of_instances = 0  # add attribut
 
 
 class Rectangle:
@@ -11,7 +11,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
+        Rectangle.number_of_instances += 1  # use attribut
 
     @property  # propert width
     def width(self):
@@ -47,15 +47,13 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        Rectangle.number_of_instances += 1
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#" * self.__width] * self.__height)
 
     def __repr__(self):
-        Rectangle.number_of_instances += 1
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1  # user attribut
