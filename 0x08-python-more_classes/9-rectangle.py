@@ -48,6 +48,19 @@ class Rectangle:
         else:
             return 2 * (self.__width + self.__height)
 
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        line_str = [str(self.print_symbol) * self.__width]
+        return "\n".join(line_str * self.__height)
+
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1  # user attribut
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the Rectangle with the greater area
@@ -66,15 +79,6 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
-    def __str__(self):
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        line_str = [str(self.print_symbol) * self.__width]
-        return "\n".join(line_str * self.__height)
-
-    def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
-
-    def __del__(self):
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1  # user attribut
+    @classmethod  # define classmethod
+    def square(cls, size=0):
+        return cls(size, size)
