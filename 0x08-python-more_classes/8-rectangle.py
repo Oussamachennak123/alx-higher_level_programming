@@ -48,7 +48,7 @@ class Rectangle:
         else:
             return 2 * (self.__width + self.__height)
 
-    @classmethod
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the Rectangle with the greater area
 
