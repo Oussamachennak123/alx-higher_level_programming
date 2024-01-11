@@ -39,21 +39,25 @@ class Rectangle:
 
     def area(self):
         return self.__width * self.__height
+        Rectangle.number_of_instances -= 1
 
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return 2 * (self.__width + self.__height)
+        Rectangle.number_of_instances -= 1
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#" * self.__width] * self.__height)
+        Rectangle.number_of_instances -= 1
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
+        Rectangle.number_of_instances -= 1
 
     def __del__(self):
         print("Bye rectangle...")
-
+        Rectangle.number_of_instances -= 1
