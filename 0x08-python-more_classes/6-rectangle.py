@@ -4,8 +4,11 @@
 
 
 class Rectangle:
-    number_of_instances = 0  # add attribut
+
     """ creation class Rectangle """
+
+    number_of_instances = 0  # add attribut
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
