@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-""" define def inherits_from"""
+"""
+    Check if an object inherits from a specified class.
+
+    Parameters:
+    - obj: The object to be checked.
+    - a_class: The class to check for inheritance.
+
+    Returns:
+    True if the object inherits from the specified class, False otherwise.
+"""
 
 
 def inherits_from(obj, a_class):
