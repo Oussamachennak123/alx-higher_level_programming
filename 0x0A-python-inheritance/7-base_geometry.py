@@ -7,8 +7,8 @@ class BaseGeometry:
     def area(self):
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name: str, value):
+    def integer_validator(self, name, value):
         if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            ValueError(f"{name} must be greater than 0")
+            ValueError("{name} must be greater than 0".format(name))
