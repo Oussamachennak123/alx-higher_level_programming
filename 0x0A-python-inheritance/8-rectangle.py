@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Definebclass BaseGeometry."""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class BaseGeometry:
@@ -27,6 +28,6 @@ class BaseGeometry:
     def __init__(self, width, height):
         """ new rectangle user"""
         self.__width = width
-        self.integer_validator = ("width", width)
         self.__height = height
+        self.integer_validator = ("width", width)
         self.integer_validator = ("height", height)
