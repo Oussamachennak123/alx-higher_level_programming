@@ -7,6 +7,6 @@ class Rectangle(BaseGeometry):  # utiliser class BaseGemetry
     def __init__(self, width, height):
         """ new rectangle user"""
         self.integer_validator = ("width", width)
-        self.integer_validator = ("height", height)
         self.__width = width
+        self.integer_validator = ("height", height)
         self.__height = height
