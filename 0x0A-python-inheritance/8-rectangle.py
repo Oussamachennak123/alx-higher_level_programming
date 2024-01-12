@@ -25,7 +25,8 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
     def __init__(self, width, height):
+        """ new rectangle user"""
         self.__width = width
-        self.__height = height
         self.integer_validator = ("width", width)
+        self.__height = height
         self.integer_validator = ("height", height)
