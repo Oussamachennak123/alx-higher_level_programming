@@ -2,6 +2,6 @@
 """ define fonction read_file(filename="")"""
 
 
-def read_file(filename=""):
-    with open(filename, encoding="UTF8") as f:
+def read_file(file=""):
+    with open(file, encoding="UTF8") as f:
         print(f.read(), end="")
