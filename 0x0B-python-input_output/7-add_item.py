@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""add all arguments to a python list """
+"""add all arguments to a python list and save them in a file"""
 import sys
 
 if __name__ == "__main__":  # verifier if script is principal or not
