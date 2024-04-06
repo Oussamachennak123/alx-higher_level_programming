@@ -29,12 +29,12 @@ def print_stats():
 signal.signal(signal.SIGINT, signal_handler)
 
 for line in sys.stdin:
-    part = line.split()
-    if len(part) == 6:
-        status_code = int(part[3])
+    parts = line.split()
+    if len(parts) == 6:
+        status_code = int(parts[3])
         if status_code in status_codes:
             status_codes[status_code] += 1
-        total_size += int(part[4])
+        total_size += int(parts[4])
         line_count += 1
         if line_count % 10 == 0:
             print_stats()
