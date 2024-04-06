@@ -2,10 +2,10 @@
 
 """Reads from standard input and computes metrics.
 
-After every ten lines or the input of a keyboard interruption (CTRL + C)
+After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
-    - Total file size up to that point
-    - Count of read status codes up to that point
+    - Total file size up to that point.
+    - Count of read status codes up to that point.
 """
 
 
@@ -14,7 +14,7 @@ import signal
 
 total_size = 0
 status_codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
-line__count = 0
+line_count = 0
 
 def signal_handler(sig, frame):
     print_stats()
@@ -29,12 +29,12 @@ def print_stats():
 signal.signal(signal.SIGINT, signal_handler)
 
 for line in sys.stdin:
-    parts = line.split()
-    if len(parts) == 6:
-        status_code = int(parts[3])
+    part = line.split()
+    if len(part) == 6:
+        status_code = int(part[3])
         if status_code in status_codes:
             status_codes[status_code] += 1
-        total_size += int(parts[4])
-        line__count += 1
-        if line__count % 10 == 0:
+        total_size += int(part[4])
+        line_count += 1
+        if line_count % 10 == 0:
             print_stats()
