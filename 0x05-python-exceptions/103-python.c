@@ -4,6 +4,7 @@
  * print_python_float - gives data of the PyFloatObject
  * @p: the PyObject
  */
+
 void print_python_float(PyObject *p)
 {
 	double value = 0;
@@ -42,9 +43,9 @@ void print_python_bytes(PyObject *p)
 	string = (assert(PyBytes_Check(p)), (((PyBytesObject *)(p))->ob_sval));
 	printf("  trying string: %s\n", string);
 	printf("  first %zd bytes:", size < 10 ? size + 1 : 10);
-	while (a < size + 1 && a < 10)
+	while (i < size + 1 && i < 10)
 	{
-		printf(" %02hhx", string[a]);
+		printf(" %02hhx", string[i]);
 		i++;
 	}
 	printf("\n");
