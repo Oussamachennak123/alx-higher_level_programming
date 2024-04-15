@@ -12,8 +12,8 @@ if __name__ == '__main__':
     Access to the database and get the states
     from the database.
     """
-    db_connected = db.connect(host="localhost", port=3306,
-                            user=argv[1], passwd=argv[2], db=argv[3])
+    db_connected = db.connect(host="localhost", port=3306, user=argv[1],
+                              passwd=argv[2], db=argv[3])
     db_cursorl = db_connected.cursor()
 
     db_cursorl.execute(
