@@ -1,20 +1,36 @@
 #!/usr/bin/python3
-from sys import argv
+"""
+Lists all states from the database hbtn_0e_0_usa sorted in ascending
+order by states.id
+"""
 import MySQLdb
+import sys
 
-""" script that lists all states from the database hbtn_0e_0_usa"""
 
-if __name__ == '__main__':
-    db = commanddb_connect = MySQLdb.connect(
-        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
+if __name__ == "__main__":
+    mysql__username = sys.argv[1]
+    mysql__password = sys.argv[2]
+    db__name = sys.argv[3]
 
-    cursor_db = commanddb_connect.cursor()  # cursor_DB objet de curseur
+    try:
+        connected = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=mysql__username,
+            passwd=mysql__password,
+            db=db__name,
+            charset="utf8"
+        )
+    except MySQLdb.Error as e:
+        print("Error connecting to database: {}".format(e))
+        sys.exit(1)
 
-    cursor_db.execute("SELECT * FROM states")
+    curl = connected.cursor()
+    curl.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = curl.fetchall()
 
-    all_selected = cursor_db.fetchall()  # affiche tous les lignes
-
-    for row in all_selected:  # imprimer les résultats de la requête SELECT
+    for row in rows:
         print(row)
-    cursor_db.close()
-    db.close()
+
+    curl.close()
+    connected.close()
