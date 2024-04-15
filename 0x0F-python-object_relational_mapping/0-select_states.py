@@ -15,5 +15,5 @@ if __name__ == '__main__':
 
     all_selected = cursor_DB.fetchall()  # affiche tous les lignes
 
-    for a in all_selected:  # imprimer les résultats de la requête SELECT
-        print(a)
+    for row in all_selected:  # imprimer les résultats de la requête SELECT
+        print(row)
