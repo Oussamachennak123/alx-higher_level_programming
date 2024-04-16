@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script defines a State class and
+Script defines a State class and
 a Base class to work with MySQLAlchemy ORM
 """
 
@@ -20,5 +20,5 @@ class State(Base):
     """
     __tablename__ = 'states'
 
-    id = Column(Integer, primarykey=True)
+    id = Column(Integer, primary__key=True)
     name = Column(String(128), nullable=False)
