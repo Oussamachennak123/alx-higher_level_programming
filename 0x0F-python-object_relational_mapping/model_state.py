@@ -5,7 +5,7 @@ Script defines a State class and
 a Base class to work with MySQLAlchemy ORM
 """
 
-from sqlalchemy import String, Column, Integer,
+from sqlalchemy import String, Column, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
