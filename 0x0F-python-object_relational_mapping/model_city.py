@@ -6,7 +6,7 @@ to work with MySQLAlchemy ORM
 """
 
 from model_state import State, Base
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import ForeignKey, Column, Integer, String
 
 
 class City(Base):
@@ -21,5 +21,5 @@ class City(Base):
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True)
-    state__id = Column(Integer, ForeignKey('states.id'), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
     name = Column(String(128), nullable=False)
