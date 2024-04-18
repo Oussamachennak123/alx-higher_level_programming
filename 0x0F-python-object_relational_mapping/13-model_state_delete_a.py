@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
 """
-This script adds the State object
-`Louisiana` to the database hbtn_0e_6_usa
+This script deletes all State objects
+with a name containing the letter a
+from the database hbtn_0e_6_usa
 """
 
 from sys import argv
@@ -12,8 +12,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Access to the database and get a state
-    from the database
+    Deletes State objects on the database.
     """
 
     db_urll = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
@@ -24,9 +23,11 @@ if __name__ == "__main__":
 
     sessionn = Session()
 
-    new__state = State(name="Louisiana")
-    sessionn.add(new__state)
+    states = sessionn.query(State).filter(State.name.contains('a'))
+    if states is not None:
+        for state in states:
+            sessionn.delete(state)
+
     sessionn.commit()
 
-    print('{0}'.format(new__state.id))
     sessionn.close()
