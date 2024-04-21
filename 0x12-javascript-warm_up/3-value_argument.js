@@ -5,5 +5,5 @@ const num = process.argv[2];
 if (num === undefined) {
   console.log('No argument');
 } else {
-  console.log(process.argv[2]);
+  console.log(num);
 }
